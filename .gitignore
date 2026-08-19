@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -15,7 +13,6 @@
 
 # production
 /build
-/dist
 
 # misc
 .DS_Store
@@ -27,15 +24,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env
-.env.local
-.env*.local
-.env.production
-config.json
-
-# deployment artifacts
-deployment-package.tar.gz
-deploy-package/
+.env*
 
 # vercel
 .vercel
@@ -44,22 +33,5 @@ deploy-package/
 *.tsbuildinfo
 next-env.d.ts
 
-# teamclaw specific
-*.log
-logs/
-backups/
-memory/
-tasks/
-files/
-/versions/
-artifacts/
-!app/api/v1/build/artifacts/
-!app/api/v1/versions/
-!app/api/v1/tasks/
-
-# pid files
-.pids/
-
 # docker
 docker-compose.override.yml
-server/dist/

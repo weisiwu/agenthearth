@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AppLayout } from "@/components/layout/AppLayout";
-import { ReactQueryProvider } from "@/components/providers/ReactQueryProvider";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
-  title: "TeamClaw 管理后台",
-  description: "TeamClaw 后台管理系统",
+  title: "AgentHearth · Local Agent Runtime",
+  description: "Local-first Agent Runtime、项目上下文与能力网关。",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/agenthearth-mark.png",
+    shortcut: "/agenthearth-mark.png",
+    apple: "/agenthearth-mark.png",
   },
 };
 
@@ -24,14 +23,12 @@ export default function RootLayout({
       <body>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
-          <ReactQueryProvider>
-            <AppLayout>{children}</AppLayout>
-            <Toaster position="bottom-right" richColors closeButton />
-          </ReactQueryProvider>
+          {children}
+          <Toaster position="bottom-right" richColors closeButton />
         </ThemeProvider>
       </body>
     </html>
